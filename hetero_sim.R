@@ -20,7 +20,6 @@ library(doParallel)
 library(dplyr)
 library(SuperLearner)
 library(hal9001)
-#library(tidyverse)
 library(caret)
 library(data.table)
 library(ggplot2)
@@ -28,10 +27,8 @@ library(earth)
 
 source('functions.R')
 
-#library <- c('SL.mean', 'SL.glm', 'SL.caretMP', 'SL.caretRF')
 library <- c('SL.mean', 'SL.glm', 'SL.gam',
-	     'SL.xgboost',#'SL.bartMachine', 
-	     'SL.randomForest', 'SL.earth')
+	     'SL.xgboost', 'SL.randomForest', 'SL.earth')
 
 
 fw = function(n) runif(n, min = 0, max = 1)
