@@ -180,7 +180,7 @@ funem <- function(k, out) {
 fun_decomp <- function(out) {
 
     n <- out$n
-    K <- length(out$vals)^(1/3)
+    K <- max(out$vals$k)
 
     valskp <- expand.grid(k = 0:K, p = 0:K)
     tmp1 <- apply(valskp, 1, funcm, out)
